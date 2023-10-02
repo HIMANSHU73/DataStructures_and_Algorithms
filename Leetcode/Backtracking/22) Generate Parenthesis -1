@@ -1,0 +1,78 @@
+/*
+There will be three codes for this same question.
+1st is written by myself without taking any hint. 
+
+1st code approach -->
+Use parenthesis generated from previous cases in bigger value of n. 
+For e.g., Put the base case of n = 1, and generate parenthesis of n = 2 using result of n = 1. Similarly, we go further.
+This appraoch of mine was working fine in terms of output but the order of output that leetcode was anticipating didn't matching, but answer was correct for all.
+Not accepted solution because of Order not matching.
+
+2nd code approach --> 
+It is solely based on recursion, no back-tracking used. (Taken a little hint.)
+Accepted solution.
+
+3rd solution -->
+Based on back-tracking (Takien a little hint)
+Accepted Solution.
+
+
+
+
+
+
+
+
+
+
+*/
+
+1st approach --> 
+
+class Solution {
+public:
+/*
+
+For n = 1, returning [ () ] .   (Base case)
+
+For n = 2, 
+adding cases to n = 1 , 
+(()) 
+()()
+
+For n = 3, 
+adding cases to n = 2
+()(())
+(())()
+((()))
+()()()
+(()())
+
+*/
+
+
+ vector<string> generateParenthesis(int n) {
+        if(n == 1) return {"()"} ;
+
+        vector<string> vec_str = generateParenthesis(n-1) ;
+        vector<string> vec_str1 ;
+        for(auto str : vec_str){
+            string s1 = '(' + str + ')' ;
+            string s2 = "()" + str ;
+            string s3 = str + "()" ;
+            if(s2 != s3) vec_str1.push_back(s3) ;
+            vec_str1.push_back(s1) ;
+            vec_str1.push_back(s2) ;
+        }
+        //sort(vec_str1.begin(),vec_str1.end())  ; //(Trying to match the order of output, but didn't matched.)
+        return vec_str1 ;
+        
+       
+    }
+};
+
+
+    
+
+
+
