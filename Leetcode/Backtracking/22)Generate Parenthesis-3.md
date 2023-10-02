@@ -15,12 +15,13 @@ public:
 //Rest is in image.
 
 void backtrack(string &s,int open,int close, vector<string>& ans){
+    
+    
     //base case
     if(open == 0 && close == 0){
         ans.push_back(s) ;
         return ;
     }
-    
     
     if(open > 0){
         s.push_back('(') ;
@@ -33,10 +34,7 @@ void backtrack(string &s,int open,int close, vector<string>& ans){
         backtrack(s,open,close-1,ans) ;
         s.pop_back() ; //backtrack..................
     }
-
-
 }
-
 
     vector<string> generateParenthesis(int n) {
         vector<string> ans ;
