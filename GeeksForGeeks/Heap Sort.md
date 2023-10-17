@@ -1,5 +1,5 @@
 # Ques. 
-
+💯
 ```#
 Given an array of size N. The task is to sort the array elements by completing functions heapify() and buildHeap() which are used to implement Heap Sort.
 ```
@@ -94,7 +94,7 @@ void buildHeap(int arr[], int n) {  // Build-Heap takes O(n) time.
 `How Buildheap function takes O(n) time, when it seems to have O(NlogN) time through it's code.`
 ```mermaid
 graph TB
-A((1,height = 3)) --> B((2))
+A((1,height = 3)) --> B((2)) 
 A((1,height = 3)) --> C((3,height=2))
 B --> D((4))
 B --> E((5))
