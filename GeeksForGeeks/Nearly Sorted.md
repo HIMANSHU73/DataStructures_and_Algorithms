@@ -1,5 +1,5 @@
-// Priority-Queue, Min-heap concept.
-/*
+
+# Ques
 `Given an array of n elements, where each element is at most k away from its target position, you need to sort the array optimally.`
 
 `Example 1:`
@@ -29,15 +29,17 @@ You are required to complete the method nearlySorted() which takes 3 arguments a
 
 `Constraints:`
 
-1 ≤ n ≤ 106
+1 ≤ n ≤ 10^6
+
 1 ≤ k < n
+
 1 ≤ arr[i] ≤ 10^7
 
 
 
 
-Explanation :-->
-
+`Explanation` :-->
+```
 We can sort the array which takes O(nlogn).
 But, We have to use the fact that it's k-sorted. 
 See the simple fact, array is k = 3 sorted in 1st example.
@@ -46,25 +48,28 @@ When you want to know who will come at 1st position ?, It means element that is 
 We can say The element which is going to come at 1st position will be out of first 4 elements. 
 Similarly, the element which is going to come at 2nd position will be out of next 4 elements i.e. 1,2,3,4th index. 
 And so on.......
+```
 _________________________________________________________________________________________________________________________________________________________
-Q) How to end ?            ---
-
+`Q) How to end ?`          ---
+```
 At last, there will be 3 elements in the priority-queue(min-heap) . You just empty it sequentially into res array. 
 And res array will be sorted. 
 Return this array.
+```
 
-Q) How there will be 3 elements left in the array ?
-ANS) From starting what you are doing, you started from min-heap, taken element into it, extract one element , give it it's position & then insert new next element and place one correct
+`Q) How there will be 3 elements left in the array ?`
+```
+From starting what you are doing, you started from min-heap, taken element into it, extract one element , give it it's position & then insert new next element and place one correct
 element at next position and so on.......
 So, at last there will be 3 element and i (iterator in for loop) will be out of range. So, it will come out of for loop, and you will be having 3 elements remaining in min-heap.
-
+```
 _________________________________________________________________________________________________________________________________________________________
 
 
 
-Code -->
+`Code -->`
 
-
+```cpp
 class Solution
 {
     public:
@@ -89,5 +94,6 @@ class Solution
         return res ;
     }
 };
+```
 
 
