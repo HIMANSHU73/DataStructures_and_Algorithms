@@ -68,6 +68,8 @@ void merge(vector<int>& nums,int l, int mid, int r){
         k++;
     }
 }
+
+
 void mergesort(vector<int>& nums, int l, int r){
     if(l < r){
         int mid = l + (r-l)/2 ;
@@ -76,6 +78,8 @@ void mergesort(vector<int>& nums, int l, int r){
         merge(nums,l,mid,r) ;
     }
 }
+
+
     vector<int> sortArray(vector<int>& nums) {
         mergesort(nums,0,nums.size()-1) ;
         return nums ;
