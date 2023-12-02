@@ -1,5 +1,5 @@
 ```
-Description  --
+Description --
 
 Given two string arrays word1 and word2, return true if the two arrays represent the same string, and false otherwise.
 
@@ -53,12 +53,13 @@ public:
 };
 ```
 
-```
+
 Extra Knowledge : -
-![image](https://github.com/HIMANSHU73/DataStructures_and_Algorithms/assets/78476814/a968a58c-ea86-456c-a386-1d40877ecd06)
+
+![image](https://github.com/HIMANSHU73/DataStructures_and_Algorithms/assets/78476814/90148ecb-d5e5-48f3-b092-507664625c84)
 
 
 
 See how these all function work -- 
 https://www.digitalocean.com/community/tutorials/compare-strings-in-c-plus-plus
-```
+
