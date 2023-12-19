@@ -5,7 +5,7 @@ Passing empty string in starting....
 ![image](https://github.com/HIMANSHU73/DataStructures_and_Algorithms/assets/78476814/66448c38-5231-4030-928e-9a82f5391f95)
 
 
-
+```cpp
 
 class Solution {
 public:
@@ -41,3 +41,4 @@ public:
                  return ans ;
     }
 };
+```
