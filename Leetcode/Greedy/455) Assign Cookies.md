@@ -27,7 +27,7 @@ Constraints:
 0 <= s.length <= 3 * 104
 1 <= g[i], s[j] <= 231 - 1
 ```
-
+```Inbuilt sort function takes O(logN) space complexity on average```
 ```cpp
 class Solution {
 public:
